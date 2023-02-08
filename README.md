@@ -9,10 +9,10 @@ I've deviced to approach this problem in a symbolic way. My goal was to create a
 
 #### - The pipeline
 The pipeline to achieve this goal is very straight forward:<br>
-1) I've created a basic grammar rules for each language
-2) Each grammar needs some context, so we need to generate the part that describe each token's tag. I've used Spacy to get the pos tagging of each token in the sentence.
-3) I've used nltk built-in function ChartParser to parse the grammar and generate all the possible trees.
-4) We take only the first generated tree, in case of ambiguity.
+1) I've created a basic grammar rules for each language<br>
+2) Each grammar needs some context, so we need to generate the part that describe each token's tag. I've used Spacy to get the pos tagging of each token in the sentence.<br>
+3) I've used nltk built-in function ChartParser to parse the grammar and generate all the possible trees.<br>
+4) We take only the first generated tree, in case of ambiguity.<br>
 
 #### - Results and conclusions
 The grammar is able to generate a tree for simple sentences, as shown in the examples at the end of the python notebook. For more complex sentences, a longer grammar would be necessary but in that case it could be very computational heavy for the nltk parser to compute.
